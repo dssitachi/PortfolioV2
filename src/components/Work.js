@@ -1,6 +1,7 @@
-import wImage from '../assets/w1.png';
 import { FiGithub } from 'react-icons/fi';
 import { HiOutlineExternalLink } from 'react-icons/hi';
+import PathVis from '../assets/pathvis.png';
+
 function Work() {
     const projects = [
         {
@@ -10,14 +11,16 @@ function Work() {
                 'The ecommerce website is developed using React, Tailwind CSS, with Strapi used as the CMS. The website utilizes context API for state management.',
             imageUrl: 'https://picsum.photos/800/600',
             demoUrl: 'https://example.com/demo',
+            githubUrl: 'https://github.com/dssitachi/Ecommerce'
         },
         {
             id: 2,
             title: 'Path Visualizer',
             description:
                 'The path visualizer site enables users to select a source and destination point, draw walls to simulate obstacles, and then generates a path between the two points. It provides an intuitive interface for exploring and analyzing different pathfinding algorithms.',
-            imageUrl: 'https://picsum.photos/800/601',
-            demoUrl: 'https://example.com/demo',
+            imageUrl: PathVis,
+            demoUrl: 'https://dssitachi.github.io/Grid-Path-Finding-Visualizer/',
+            githubUrl: 'https://github.com/dssitachi/Ecommerce'
         },
         {
             id: 3,
@@ -26,6 +29,7 @@ function Work() {
                 'Re / Member built with React and Tailwind is a fun and engaging way to test your memory skills. It presents a grid of cards, each with a hidden image, and challenges you to flip over two cards at a time to find a match. Designed with customizable difficulty levels and attractive animations, making it suitable for players of all ages.',
             imageUrl: 'https://picsum.photos/800/602',
             demoUrl: 'https://example.com/demo',
+            githubUrl: 'https://github.com/dssitachi'
         },
     ]
 

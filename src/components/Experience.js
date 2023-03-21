@@ -1,54 +1,67 @@
-import { useState } from 'react';
-
+import { MdOutlineDoubleArrow } from 'react-icons/md'
 function Experience() {
-  const [activeTab, setActiveTab] = useState(0);
-
-  const jobExperience = [
+  const experiences = [
     {
-      jobTitle: 'Web Developer',
-      companyName: 'ABC Company',
-      employmentDates: '2019 - Present',
-      jobDescription: 'Developed and maintained web applications using React and Node.js.',
+      company: "Citi",
+      position: "Technology Analyst",
+      duration: "July 2021 - Present",
+      description: [
+        "Designed UI screens and integrated them with APIs to develop a seamless user experience",
+        "Implemented complex application flows to ensure optimal functionality of the application",
+        "Customized Ag-grid to meet specific user requirements and used Server-Side Row Model (SSRM) for optimal performance",
+        "Utilized Angular framework to develop robust, scalable, and efficient applications."
+      ]
     },
     {
-      jobTitle: 'Software Engineer',
-      companyName: 'XYZ Corporation',
-      employmentDates: '2016 - 2019',
-      jobDescription: 'Contributed to the development of a large-scale enterprise software system using Java and Spring Framework.',
+      company: "Veritas",
+      position: "Summer Intern",
+      duration: "Jan 2021 - June 2021",
+      description: [
+        "Generated reports to analyze test results during the automation of test suites for Veritas Netbackup Java GUI using Robot Framework in Python",
+        "Successfully captured screenshots of the GUI at the point of failure of the test suite to identify root causes and resolve issues quickly",
+        "Reduced the time and effort required for manual testing, leading to increased efficiency and productivity."
+      ]
     },
-    // Add more job experience objects here...
+    {
+      company: "Mastercard",
+      position: "Summer Intern",
+      duration: "May 2020",
+      description: [
+        "Developed an online test web application using Angular framework",
+        "Added features such as a timer, flagging system, and navigation options to enhance user experience",
+        "Enabled examiners to add questions to the test, making it a complete end-to-end solution for conducting online tests."
+      ],
+    },
   ];
 
   return (
     <section className="my-64 mx-auto px-8 md:px-20 lg:px-24 max-w-5xl">
-        <h3 className="text-4xl w-full mb-6 text-gray-300 font-bold">Experience</h3>
-      <div className="flex mb-4">
-        {jobExperience.map((job, index) => (
-          <button
-            key={index}
-            className={`${
-              activeTab === index
-                ? 'bg-gray-200 text-gray-800'
-                : 'bg-gray-300 text-gray-600 hover:bg-gray-200'
-            } py-2 px-4 rounded-l-lg`}
-            onClick={() => setActiveTab(index)}
-          >
-            {job.jobTitle}
-          </button>
-        ))}
-      </div>
-      <div className="p-4">
-        <h2 className="text-lg font-semibold mb-2">
-          {jobExperience[activeTab].jobTitle}
-        </h2>
-        <h3 className="text-md font-semibold mb-2">
-          {jobExperience[activeTab].companyName}
-        </h3>
-        <p className="text-sm mb-2">
-          {jobExperience[activeTab].employmentDates}
-        </p>
-        <p className="text-sm">{jobExperience[activeTab].jobDescription}</p>
-      </div>
+      <h3 className="text-4xl w-full mb-6 text-gray-300 font-bold">Experience</h3>
+
+      {experiences.map(e => (
+        <div key={e.company} className="w-full flex flex-col mb-4 p-4 bg-[#112A50] rounded-lg">
+          <div className="w-full flex flex-col sm:flex-row justify-between">
+            <p className="text-my-text"> 
+              <span className="text-md font-light">{e.position} </span> 
+              <span className="text-lg font-bold">@{e.company} </span>
+            </p>
+            <p className="text-gray-300 italic text-sm">{e.duration}</p>
+          </div>
+          <div className="w-full my-1">
+            <ul>
+            { e.description.map(point => (
+              <li key={point}
+                className="text-gray-400 my-2">
+                  <MdOutlineDoubleArrow className='inline pb-1 text-white' />
+                  {point}
+              </li>
+            ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+
+
     </section>
   );
 }

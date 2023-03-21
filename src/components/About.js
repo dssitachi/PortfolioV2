@@ -1,7 +1,7 @@
 import Profile from '../assets/profile.jpg'
 
 function About() {
-
+    var skills = ['Javascript', 'React', 'Angular', 'Tailwind CSS', 'HTML/CSS']
     return (
         // grid grid-cols-1 sm:grid-cols-2 gap-8 text-gray-300
         <section className="my-32 mx-auto px-8 md:px-20 lg:px-24 max-w-5xl ">
@@ -21,7 +21,12 @@ function About() {
                     </p>
 
                     <div className="flex flex-wrap text-gray-400 mt-4">
-                        <div className="w-full md:w-1/2">
+                        { skills.map(skill => (
+                            <span key={skill} className="bg-my-text text-sm text-my-bg p-1 rounded-lg m-2">
+                                {skill}
+                            </span>
+                        ))}
+                        {/* <div className="w-full md:w-1/2">
                             <ul className="list-disc list-inside">
                                 <li className="my-1 text-my-text">HTML/CSS</li>
                                 <li className="my-1">React</li>
@@ -34,7 +39,7 @@ function About() {
                                 <li className="my-1">Angular</li>
 
                             </ul>
-                        </div>
+                        </div> */}
                     </div>
 
                 </div>
