@@ -56,8 +56,8 @@ function Work() {
                                 <p className="mt-2 text-gray-400 bg-[#112A50] p-2">{project.description}</p>
                                 </div>
                                 <div className={`flex flex-row gap-x-4 ${project.id % 2 ? '' : 'justify-end'} `}>
-                                    <a href={project.githubUrl}> <FiGithub className='w-6 h-6 text-gray-100 cursor-pointer hover:text-my-text' /> </a>
-                                    <a href={project.demoUrl}> <HiOutlineExternalLink className='w-7 h-6 text-gray-100 cursor-pointer hover:text-my-text' /> </a>
+                                    <a href={project.githubUrl} target="_blank"> <FiGithub className='w-6 h-6 text-gray-100 cursor-pointer hover:text-my-text' /> </a>
+                                    <a href={project.demoUrl} target="_blank"> <HiOutlineExternalLink className='w-7 h-6 text-gray-100 cursor-pointer hover:text-my-text' /> </a>
                                 </div>
                             </div>
                         </div>
