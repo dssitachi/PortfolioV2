@@ -1,16 +1,17 @@
 import { FiGithub } from 'react-icons/fi';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 import PathVis from '../assets/pathvis.png';
+import Ecommerce from '../assets/Ecommerce.png';
 
 function Work() {
     const projects = [
         {
             id: 1,
-            title: 'E-commerce Website',
+            title: 'Workspace Essentials',
             description:
-                'The ecommerce website is developed using React, Tailwind CSS, with Strapi used as the CMS. The website utilizes context API for state management.',
-            imageUrl: 'https://picsum.photos/800/600',
-            demoUrl: 'https://example.com/demo',
+                'Workspace Essentials is an ecommerce application built using React and Tailwind CSS. Strapi is used as the CMS, providing easy content management and customization options. We have integrated Stripe for secure and hassle-free payments. With a seamless checkout process and easy navigation, our ecommerce application offers an exceptional user experience',
+            imageUrl: Ecommerce,
+            demoUrl: 'https://ecommerce-dssitachi.vercel.app/',
             githubUrl: 'https://github.com/dssitachi/Ecommerce'
         },
         {
@@ -20,7 +21,7 @@ function Work() {
                 'The path visualizer site enables users to select a source and destination point, draw walls to simulate obstacles, and then generates a path between the two points. It provides an intuitive interface for exploring and analyzing different pathfinding algorithms.',
             imageUrl: PathVis,
             demoUrl: 'https://dssitachi.github.io/Grid-Path-Finding-Visualizer/',
-            githubUrl: 'https://github.com/dssitachi/Ecommerce'
+            githubUrl: 'https://github.com/dssitachi/Grid-Path-Finding-Visualizer'
         },
         {
             id: 3,
@@ -55,7 +56,7 @@ function Work() {
                                 <p className="mt-2 text-gray-400 bg-[#112A50] p-2">{project.description}</p>
                                 </div>
                                 <div className={`flex flex-row gap-x-4 ${project.id % 2 ? '' : 'justify-end'} `}>
-                                    <a href={project.demoUrl}> <FiGithub className='w-6 h-6 text-gray-100 cursor-pointer hover:text-my-text' /> </a>
+                                    <a href={project.githubUrl}> <FiGithub className='w-6 h-6 text-gray-100 cursor-pointer hover:text-my-text' /> </a>
                                     <a href={project.demoUrl}> <HiOutlineExternalLink className='w-7 h-6 text-gray-100 cursor-pointer hover:text-my-text' /> </a>
                                 </div>
                             </div>
