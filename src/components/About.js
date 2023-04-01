@@ -4,7 +4,7 @@ function About() {
     var skills = ['Javascript', 'React', 'Angular', 'Tailwind CSS', 'HTML/CSS']
     return (
         // grid grid-cols-1 sm:grid-cols-2 gap-8 text-gray-300
-        <section className="my-32 mx-auto px-8 md:px-20 lg:px-24 max-w-5xl ">
+        <section name="about" className="my-32 mx-auto px-8 md:px-20 lg:px-24 max-w-5xl ">
             {/* container for centering */}
             <h3 className="text-4xl w-full mb-6 text-gray-300 font-bold"> About Me </h3>
             <div className="grid sm:grid-cols-[3fr_2fr] gap-8">

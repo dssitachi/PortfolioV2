@@ -16,7 +16,7 @@ function Contact() {
     }
 
     return (
-        <section className="mt-64 pb-64 mx-auto px-8 md:px-20 lg:px-24 max-w-5xl">
+        <section name="contact" className="mt-64 pb-64 mx-auto px-8 md:px-20 lg:px-24 max-w-5xl">
             <div className="flex flex-col justify-center items-center text-center">
                 <h2 className="text-6xl w-full mb-6 text-center text-gray-300 font-bold">Let's connect</h2>
                 <p className="text-gray-500 my-1">I'm always available to answer your queries and exchange greetings!</p>

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../assets/logopf1.png';
+import { Link } from 'react-scroll';
 
 function Navbar() {
     const [mobileMenu, setMobileMenu] = useState(false)
@@ -20,10 +21,26 @@ function Navbar() {
                 transition={{ duration: 0.8 }}
             >
                 <ul className="hidden md:flex">
-                    <li className="px-4 cursor-pointer hover:text-my-text">About</li>
-                    <li className="px-4 cursor-pointer hover:text-my-text">Experience</li>
-                    <li className="px-4 cursor-pointer hover:text-my-text">Work</li>
-                    <li className="px-4 cursor-pointer hover:text-my-text">Contact</li>
+                    <li className="px-4 cursor-pointer hover:text-my-text">
+                        <Link to="about" smooth={true} offset={-100} duration={500}>
+                            About
+                        </Link>
+                    </li>
+                    <li className="px-4 cursor-pointer hover:text-my-text">
+                        <Link to="experience" smooth={true} offset={-100} duration={500}>
+                            Experience
+                        </Link>
+                    </li>
+                    <li className="px-4 cursor-pointer hover:text-my-text">
+                        <Link to="work" smooth={true} offset={-100} duration={500}>
+                            Work
+                        </Link>
+                    </li>
+                    <li className="px-4 cursor-pointer hover:text-my-text">
+                        <Link to="contact" smooth={true} offset={-100} duration={500}>
+                            Contact
+                        </Link>
+                    </li>
                 </ul>
             </motion.div>
             {/* Hamburger */}
@@ -33,10 +50,27 @@ function Navbar() {
 
             {/* Mobile Menu */}
             <ul className={mobileMenu ? 'absolute top-0 left-0 w-full h-screen bg-my-bg flex flex-col justify-center items-center' : 'hidden'}>
-                <li className="py-6 text-2xl">Home</li>
-                <li className="py-6 text-2xl">About</li>
-                <li className="py-6 text-2xl">Work</li>
-                <li className="py-6 text-2xl">Contact</li>
+             
+                <li className="py-6 text-2xl">
+                        <Link to="about" smooth={true} offset={-100} duration={500}>
+                            About
+                        </Link>
+                    </li>
+                    <li className="py-6 text-2xl">
+                        <Link to="experience" smooth={true} offset={-100} duration={500}>
+                            Experience
+                        </Link>
+                    </li>
+                    <li className="py-6 text-2xl">
+                        <Link to="work" smooth={true} offset={-100} duration={500}>
+                            Work
+                        </Link>
+                    </li>
+                    <li className="py-6 text-2xl">
+                        <Link to="contact" smooth={true} offset={-100} duration={500}>
+                            Contact
+                        </Link>
+                    </li>
             </ul>
         </nav>
     )

@@ -35,7 +35,7 @@ function Work() {
     ]
 
     return (
-        <section className="my-64 mx-auto px-8 md:px-20 lg:px-24 max-w-5xl">
+        <section name="work" className="my-64 mx-auto px-8 md:px-20 lg:px-24 max-w-5xl">
             <h3 className="text-4xl w-full mb-6 text-gray-300 font-bold">My Work</h3>
 
             <div className="max-w-7xl mx-auto py-12">
